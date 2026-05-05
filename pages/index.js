@@ -110,9 +110,31 @@ function ScrambleText({
   return <span>{output}</span>;
 }
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: 'easeOut' },
+  },
+};
+
+const staggerContainer = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#050816] text-white">
+      <div className="pointer-events-none fixed inset-0 -z-10">
+        <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-blue-500/20 blur-3xl" />
+        <div className="absolute bottom-20 right-10 h-80 w-80 rounded-full bg-purple-500/20 blur-3xl" />
+      </div>
       <Head>
         <title>Daniel Urbina | AI Developer Portfolio</title>
         <meta
@@ -127,7 +149,7 @@ export default function Home() {
             <ScrambleText
               japanese="ダニエル・ウルビナ"
               english="Daniel Urbina"
-              speed={40}
+              speed={30}
               delay={300}
             />
           </a>
@@ -143,15 +165,25 @@ export default function Home() {
       </header>
 
       <main className="mx-auto max-w-6xl px-6">
-        <section className="grid min-h-screen items-center gap-12 pt-24 md:grid-cols-[1.2fr_0.8fr]">
+        <motion.section
+          variants={staggerContainer}
+          initial="hidden"
+          animate="show"
+          className="grid min-h-screen items-center gap-12 pt-24 md:grid-cols-[1.2fr_0.8fr]"
+        >
           <div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
-              AI Developer • Software Engineering • Mechanical Engineering
-            </p>
+            <motion.p variants={fadeUp} className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+              <ScrambleText
+                japanese="AIカイハツシャ・ソフトウェアコウガク・キカイコウガク"
+                english="AI Developer • Software Engineering • Mechanical Engineering"
+                speed={10}
+                delay={300}
+              />
+            </motion.p>
 
-            <h1 className="mb-6 text-5xl font-extrabold tracking-tight md:text-7xl">
+            <motion.h1 variants={fadeUp} className="mb-6 text-5xl font-extrabold tracking-tight md:text-7xl"> 
               I build AI tools, automation systems, and software products.
-            </h1>
+            </motion.h1>
 
             <p className="mb-8 max-w-2xl text-lg leading-8 text-gray-300">
               I am a Software Engineering student and Mechanical Engineer focused on AI,
@@ -175,7 +207,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-center md:justify-end">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, rotate: -3 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            whileHover={{ scale: 1.05, rotate: 1 }}
+            className="flex justify-center md:justify-end"
+          >
             <div className="relative">
               <div className="absolute -inset-4 rounded-[2rem] bg-blue-500/20 blur-2xl"></div>
               <img
@@ -184,10 +222,17 @@ export default function Home() {
                 className="relative h-80 w-80 rounded-[2rem] border border-white/10 object-cover shadow-2xl"
               />
             </div>
-          </div>
-        </section>
+          </motion.div>
 
-        <section className="grid gap-4 pb-24 md:grid-cols-4">
+        </motion.section>
+
+        <motion.section
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid gap-4 pb-24 md:grid-cols-4"
+        >
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <p className="text-3xl font-bold">5+</p>
             <p className="mt-2 text-sm text-gray-400">AI and software projects</p>
@@ -204,9 +249,16 @@ export default function Home() {
             <p className="text-3xl font-bold">Full Stack</p>
             <p className="mt-2 text-sm text-gray-400">Next.js, FastAPI, APIs, databases</p>
           </div>
-        </section>
+        </motion.section>
 
-        <section id="about" className="border-t border-white/10 py-24">
+        <motion.section
+          id="about"
+          className="border-t border-white/10 py-24"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        > 
           <h2 className="mb-6 text-4xl font-bold">About</h2>
           <p className="max-w-3xl text-lg leading-8 text-gray-300">
             I combine mechanical engineering problem-solving with software engineering
@@ -214,13 +266,17 @@ export default function Home() {
             including AI assistants, automation tools, computer vision pipelines,
             dashboards, and backend APIs.
           </p>
-        </section>
+        </motion.section>
 
         <section id="experience" className="border-t border-white/10 py-24">
           <h2 className="mb-10 text-4xl font-bold">Experience</h2>
 
           <div className="space-y-6">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+           <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -6, scale: 1.03 }}
+              className="rounded-2xl border border-white/10 bg-white/5 p-6"
+            >
               <p className="text-sm text-blue-400">Apr 2024 - Present</p>
               <h3 className="mt-2 text-2xl font-bold">Instructional Design Assistant</h3>
               <p className="text-gray-400">Ensign College • Salt Lake City, Utah</p>
@@ -229,9 +285,11 @@ export default function Home() {
                 HTML, and CSS. Debugged production code and improved reliability across
                 100+ deployed components.
               </p>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            </motion.div><motion.div
+              variants={fadeUp}
+              whileHover={{ y: -6, scale: 1.03 }}
+              className="rounded-2xl border border-white/10 bg-white/5 p-6"
+            >            
               <p className="text-sm text-blue-400">Aug 2023 - Apr 2024</p>
               <h3 className="mt-2 text-2xl font-bold">Math Instructional Design Assistant</h3>
               <p className="text-gray-400">Brigham Young University • Provo, Utah</p>
@@ -240,9 +298,13 @@ export default function Home() {
                 Designed reusable Python modules to improve scalability and reduce
                 development time.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -6, scale: 1.03 }}
+              className="rounded-2xl border border-white/10 bg-white/5 p-6"
+            > 
               <p className="text-sm text-blue-400">Sept 2022 - Dec 2022</p>
               <h3 className="mt-2 text-2xl font-bold">Python Developer</h3>
               <p className="text-gray-400">Asfaltics • Bogota, Colombia</p>
@@ -251,7 +313,7 @@ export default function Home() {
                 inspection. Developed data processing pipelines and resolved multithreading
                 issues for synchronized camera inputs.
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -260,9 +322,14 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project) => (
-              <div
+              <motion.div
                 key={project.title}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10"
               >
                 <h3 className="text-2xl font-bold">{project.title}</h3>
                 <p className="mt-4 text-gray-300">{project.description}</p>
@@ -277,7 +344,8 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
+              
             ))}
           </div>
         </section>
