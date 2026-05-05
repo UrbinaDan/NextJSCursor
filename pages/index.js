@@ -1,5 +1,7 @@
 // Portfolio website for Daniel Urbina, showcasing AI development, software engineering, and mechanical engineering projects and experience. Built with Next.js and Tailwind CSS for a modern, responsive design.
 import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 const projects = [
   {
@@ -53,6 +55,61 @@ const skills = [
   'Postman',
 ];
 
+function ScrambleText({
+  japanese,
+  english,
+  speed = 40,
+  delay = 300,
+}) {
+  const chars =
+    'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン';
+
+  // ✅ SSR-safe initial value (same on server + client)
+  const [output, setOutput] = useState(japanese);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    let frame = 0;
+    let timeout;
+
+    const animate = () => {
+      let result = '';
+
+      for (let i = 0; i < english.length; i++) {
+        if (i < frame) {
+          result += english[i];
+        } else {
+          result += chars[Math.floor(Math.random() * chars.length)];
+        }
+      }
+
+      setOutput(result);
+
+      if (frame <= english.length) {
+        frame++;
+        timeout = setTimeout(animate, speed);
+      }
+    };
+
+    const start = setTimeout(() => {
+      animate();
+    }, delay);
+
+    return () => {
+      clearTimeout(timeout);
+      clearTimeout(start);
+    };
+  }, [mounted, english, speed, delay]);
+
+  return <span>{output}</span>;
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#050816] text-white">
@@ -67,7 +124,12 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#050816]/80 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#" className="text-lg font-bold">
-            Daniel Urbina
+            <ScrambleText
+              japanese="ダニエル・ウルビナ"
+              english="Daniel Urbina"
+              speed={40}
+              delay={300}
+            />
           </a>
 
           <div className="hidden gap-6 text-sm text-gray-300 md:flex">
