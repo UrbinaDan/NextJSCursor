@@ -116,7 +116,7 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-[2rem] bg-blue-500/20 blur-2xl"></div>
               <img
-                src="NextJSCursor/ProfPicture.png"
+                src="NextJSCursor/profile.png"
                 alt="Daniel Urbina"
                 className="relative h-80 w-80 rounded-[2rem] border border-white/10 object-cover shadow-2xl"
               />
