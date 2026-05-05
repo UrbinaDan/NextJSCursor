@@ -1,3 +1,4 @@
+// Portfolio website for Daniel Urbina, showcasing AI development, software engineering, and mechanical engineering projects and experience. Built with Next.js and Tailwind CSS for a modern, responsive design.
 import Head from 'next/head';
 
 const projects = [
