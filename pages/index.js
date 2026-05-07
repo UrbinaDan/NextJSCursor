@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import ModelViewer from '../components/ModelViewer';
 
 const projects = [
   {
@@ -33,6 +34,87 @@ const projects = [
     description:
       'Mechanical engineering project designing an automated mobile robot with lift and controlled distribution systems.',
     tags: ['Robotics', 'CAD', 'Engineering'],
+  },
+];
+
+const caseStudies = [
+  {
+    title: 'Paper Theater AI',
+    subtitle: 'AI Scene Understanding Pipeline',
+    modelPath: '/NextJSCursor/models/RenderAnimationTest_1.glb',
+    modelScale: 2,
+    modelPosition: [0, 0, 0],
+    summary:
+      'A computer vision pipeline that transforms flat images into structured layered scenes for physical paper theater design.',
+    metrics: ['Computer Vision', 'Depth Estimation', 'Physical Output'],
+    problem:
+      'A single image does not naturally contain clean physical layers. To create paper theater designs, the system needs to understand objects, depth, foreground, background, and scene structure.',
+    solution:
+      'I built a pipeline that combines segmentation, depth estimation, and layered scene reconstruction. The goal was to separate image elements into structured layers that could be used for physical design and fabrication planning.',
+    technologies: ['Python', 'Computer Vision', 'Segmentation', 'Depth Estimation', 'AI Models'],
+    result:
+      'The system generated structured scene representations that support physical modeling and paper theater production.',
+  },
+  {
+    title: 'AI Assistant System',
+    subtitle: 'Real-Time LLM Assistant',
+    summary:
+      'A real-time assistant system using FastAPI, WebSockets, LLM responses, and retrieval-based context handling.',
+    metrics: ['FastAPI', 'WebSockets', 'RAG'],
+    problem:
+      'Many AI assistants respond to prompts but do not keep useful context across different workflows like notes, tasks, and conversations.',
+    solution:
+      'I built a backend system with FastAPI and WebSockets for real-time communication, then added LLM-based response generation and retrieval-based context handling.',
+    technologies: ['Python', 'FastAPI', 'WebSockets', 'LangChain', 'OpenAI API', 'RAG'],
+    result:
+      'The system became a foundation for a multi-mode assistant that can support conversation, notes, and task-based workflows.',
+  },
+  {
+    title: 'Canvas QA Automation Tool',
+    subtitle: 'AI-Assisted Course Quality Review',
+    summary:
+      'An automation tool for analyzing course content quality using APIs, rules, and AI-generated feedback.',
+    metrics: ['Automation', 'APIs', 'EdTech'],
+    problem:
+      'Manual course quality review can be repetitive and inconsistent, especially when checking many pages, assignments, and instructional components.',
+    solution:
+      'I built an API-driven validation system that checks course content against quality rules and generates feedback for improvement.',
+    technologies: ['Python', 'APIs', 'Automation', 'LLM Feedback', 'Rule-Based Validation'],
+    result:
+      'The tool reduced repetitive review work and created a more consistent way to identify course quality issues.',
+  },
+  {
+    title: 'AI-Powered Stock Analysis Tool',
+    subtitle: 'Financial Data Automation System',
+    summary:
+      'A backend system that automates financial data extraction and analysis using Python and FastAPI.',
+    metrics: ['Python', 'FastAPI', 'Finance'],
+    problem:
+      'Stock evaluation requires gathering data from multiple sources, calculating financial metrics, and organizing information for decision-making.',
+    solution:
+      'I built a backend workflow that integrates financial data sources, extracts key metrics, and structures the data for analysis.',
+    technologies: ['Python', 'FastAPI', 'Yahoo Finance', 'Morningstar', 'APIs', 'Financial Analysis'],
+    result:
+      'The system helped automate repetitive financial research steps and made stock analysis more structured and scalable.',
+  },
+  {
+    title: 'Autonomous Feeding Robot',
+    subtitle: 'Mechanical Engineering System Design',
+    modelPath: '/NextJSCursor/models/EnsambleGeneral.glb',
+    modelScale: 0.003,
+    modelPosition: [0, -1.5, 0],
+    modelRotation: [0, Math.PI / 2, 0],
+    showModelDebug: true,
+    summary:
+      'A mobile robotic feeding system designed for automated livestock feeding across multiple locations.',
+    metrics: ['Robotics', 'CAD Design', 'Automation'],
+    problem:
+      'Manual livestock feeding is repetitive, time-consuming, and difficult to optimize when feeding happens across multiple locations.',
+    solution:
+      'I designed a mobile robot with a mobility system, vertical lift mechanism, route-based operation, and controlled food distribution.',
+    technologies: ['Fusion 360', 'Inventor', 'AutoCAD', 'Mechanical Design', 'Robotics', 'Automation'],
+    result:
+      'The project produced a complete engineering concept combining mobility, mechanical lifting, and controlled distribution.',
   },
 ];
 
@@ -129,6 +211,8 @@ const staggerContainer = {
 };
 
 export default function Home() {
+  const [openCase, setOpenCase] = useState(0);
+
   return (
     <div className="min-h-screen bg-[#050816] text-white">
       <div className="pointer-events-none fixed inset-0 -z-10">
@@ -149,7 +233,7 @@ export default function Home() {
             <ScrambleText
               japanese="ダニエル・ウルビナ"
               english="Daniel Urbina"
-              speed={30}
+              speed={40}
               delay={300}
             />
           </a>
@@ -158,6 +242,7 @@ export default function Home() {
             <a href="#about" className="hover:text-white">About</a>
             <a href="#experience" className="hover:text-white">Experience</a>
             <a href="#projects" className="hover:text-white">Projects</a>
+            <a href="#case-studies" className="hover:text-white">Case Studies</a>
             <a href="#skills" className="hover:text-white">Skills</a>
             <a href="#contact" className="hover:text-white">Contact</a>
           </div>
@@ -349,6 +434,154 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <motion.section
+          id="case-studies"
+          className="border-t border-white/10 py-24"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <div className="mb-10">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+              Detailed project breakdowns
+            </p>
+            <h2 className="text-4xl font-bold">Case Studies</h2>
+            <p className="mt-4 max-w-3xl text-lg leading-8 text-gray-300">
+              A deeper look at selected projects, including the problem, solution,
+              technologies used, and final outcome. Click each project to expand it.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {caseStudies.map((study, index) => {
+              const isOpen = openCase === index;
+
+              return (
+                <motion.article
+                  key={study.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: index * 0.06 }}
+                  className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition hover:bg-white/10"
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpenCase(isOpen ? null : index)}
+                    className="flex w-full flex-col gap-4 p-6 text-left md:flex-row md:items-center md:justify-between"
+                  >
+                    <div className="flex items-start gap-5">
+                      <span className="text-2xl font-bold text-blue-400">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+
+                      <div>
+                        <h3 className="text-2xl font-bold">{study.title}</h3>
+                        <p className="mt-1 text-sm text-blue-300">{study.subtitle}</p>
+                        <p className="mt-3 max-w-2xl text-gray-300">{study.summary}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-3">
+                      <div className="hidden flex-wrap gap-2 md:flex md:justify-end">
+                        {study.metrics.map((metric) => (
+                          <span
+                            key={metric}
+                            className="rounded-full border border-blue-400/30 bg-blue-400/10 px-3 py-1 text-xs text-blue-300"
+                          >
+                            {metric}
+                          </span>
+                        ))}
+                      </div>
+
+                      <span className="text-2xl text-gray-300">
+                        {isOpen ? '−' : '+'}
+                      </span>
+                    </div>
+                  </button>
+
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: isOpen ? 'auto' : 0,
+                      opacity: isOpen ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.35, ease: 'easeInOut' }}
+                    className="overflow-hidden"
+                  >
+                    <div className="border-t border-white/10 p-6 md:p-8">
+                      <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+                        <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
+                          <div className="flex h-64 items-center justify-center rounded-xl border border-white/10 bg-[#030712] text-center">
+                            <div>
+                              <p className="text-sm uppercase tracking-[0.25em] text-blue-400">
+                                Preview
+                              </p>
+                              <p className="mt-3 text-lg font-semibold text-white">
+                                {study.title}
+                              </p>
+                                {study.modelPath ? (
+                                  <ModelViewer
+                                    path={study.modelPath}
+                                    scale={study.modelScale || 1}
+                                    position={study.modelPosition || [0, 0, 0]}
+                                  />
+                                ) : (
+                                  <p className="mt-2 text-sm text-gray-400">
+                                    Project preview coming soon.
+                                  </p>
+                                )}
+                            </div>
+                          </div>
+
+                          <p className="mt-4 text-center text-sm text-gray-500">
+                            drag to rotate • scroll to zoom
+                          </p>
+                        </div>
+
+                        <div>
+                          <div className="grid gap-5 md:grid-cols-3">
+                            <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
+                              <h4 className="mb-3 text-lg font-bold text-white">Problem</h4>
+                              <p className="text-sm leading-6 text-gray-300">{study.problem}</p>
+                            </div>
+
+                            <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
+                              <h4 className="mb-3 text-lg font-bold text-white">Solution</h4>
+                              <p className="text-sm leading-6 text-gray-300">{study.solution}</p>
+                            </div>
+
+                            <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
+                              <h4 className="mb-3 text-lg font-bold text-white">Result</h4>
+                              <p className="text-sm leading-6 text-gray-300">{study.result}</p>
+                            </div>
+                          </div>
+
+                          <div className="mt-6">
+                            <h4 className="mb-3 text-lg font-bold text-white">Technologies</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {study.technologies.map((tech) => (
+                                <span
+                                  key={tech}
+                                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-gray-300"
+                                >
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </motion.article>
+              );
+            })}
+          </div>
+        </motion.section>
+
 
         <section id="skills" className="border-t border-white/10 py-24">
           <h2 className="mb-10 text-4xl font-bold">Skills</h2>
