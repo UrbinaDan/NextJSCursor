@@ -77,7 +77,7 @@ export default function GraphicDesign() {
   <div className="grid md:grid-cols-2 gap-8 items-start">
     <div>
       <img
-        src="/NextJSCursor/graphic-design/personal-brand-sticker.png"
+        src="/NextJSCursor/graphic-design/personal-brand-sticker.jpg"
         alt="Personal brand sticker featuring hand-drawn letter D logo"
         className="rounded-xl shadow-md w-full max-w-md mx-auto bg-white p-4"
       />
@@ -89,7 +89,7 @@ export default function GraphicDesign() {
       </h3>
 
       <p className="mb-4 leading-relaxed">
-        I chose this thumbnail because th letter D is something I developed after years of writing in cursive. I have written in cursive since I was a child, and my handwriting was not always easy to read. Over time, I naturally created this unique version of the letter D, which became meaningful to me because it reflects part of my personality and creative style. I also used the shape of an integral sign to help form the design, giving it an additional symbolic meaning connected to engineering and problem solving. Because of this, the design felt personal, simple, and unique to my identity. I refined the original sketch by cleaning the lines, adding a circular border, and improving the contrast and overall layout.
+        I chose this thumbnail because that letter D is something I developed after years of writing in cursive. I have written in cursive since I was a child, and my handwriting was not always easy to read. Over time, I naturally created this unique version of the letter D, which became meaningful to me because it reflects part of my personality and creative style. I also used the shape of an integral sign to help form the design, giving it an additional symbolic meaning connected to engineering and problem solving. Because of this, the design felt personal, simple, and unique to my identity. I refined the original sketch by cleaning the lines, adding a circular border, and improving the contrast and overall layout.
       </p>
 
       <p className="leading-relaxed">
