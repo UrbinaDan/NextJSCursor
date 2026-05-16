@@ -69,29 +69,6 @@ export default function GraphicDesign() {
             </div>
           </section>
 
-          <section className="bg-white/70 rounded-2xl shadow-lg p-6 md:p-10">
-            <h2 className="text-2xl font-bold mb-4">
-              Design Process Screenshots
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <img
-                src="/NextJSCursor/graphic-design/process-1.png"
-                alt="Process screenshot 1"
-                className="rounded-xl shadow-md w-full"
-              />
-              <img
-                src="/NextJSCursor/graphic-design/process-2.png"
-                alt="Process screenshot 2"
-                className="rounded-xl shadow-md w-full"
-              />
-              <img
-                src="/NextJSCursor/graphic-design/process-3.png"
-                alt="Process screenshot 3"
-                className="rounded-xl shadow-md w-full"
-              />
-            </div>
-          </section>
         </div>
       </main>
     </>
