@@ -145,7 +145,83 @@ export default function GraphicDesign() {
   </div>
 </section>
 
+<section className="bg-white/70 rounded-2xl shadow-lg p-6 md:p-10 mb-10">
+  <h2 className="text-2xl font-bold mb-4">
+    Writing Digital Content – Top 10 Article
+  </h2>
 
+  <div className="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <img
+        src="/NextJSCursor/graphic-design/vr-writing-cover.jpg"
+        alt="Virtual reality and neuroscience themed article cover"
+        className="rounded-xl shadow-md w-full"
+      />
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold mb-3">
+        Top 10 Reasons Why Virtual Reality Could Change Our Future
+      </h3>
+
+      <p className="mb-4 leading-relaxed">
+        For this writing assignment, I created a top 10 article about
+        how virtual reality may influence the future of education,
+        healthcare, communication, creativity, and human interaction.
+        I chose this topic because I have become very interested in
+        technology, artificial intelligence, and neuroscience. What
+        inspired this article was a study where participants learned
+        to “fly” using virtual wings in a VR environment, and their
+        brains started responding to the wings similarly to real body
+        parts.
+      </p>
+
+      <p className="mb-4 leading-relaxed">
+        Through this project, I practiced organizing information into
+        a clear structure while also improving my writing process
+        through planning, drafting, revising, and rewriting. I used
+        headings and supporting details to make the article easier to
+        read and more engaging for the audience. This assignment also
+        helped me improve clarity, conciseness, and transitions between
+        ideas.
+      </p>
+
+      <p className="leading-relaxed">
+        One thing I found especially interesting was learning how
+        adaptable the human brain can be. Research about virtual
+        reality and brain plasticity made me think about how future
+        technology could completely change the way humans learn,
+        recover from injuries, and interact with digital environments.
+      </p>
+
+      <div className="mt-6">
+        <h4 className="font-semibold mb-2">
+          Skills Demonstrated
+        </h4>
+
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Informative writing</li>
+          <li>Article organization</li>
+          <li>Research integration</li>
+          <li>Revision and rewriting</li>
+          <li>Audience-focused communication</li>
+        </ul>
+      </div>
+
+      <div className="mt-6">
+        <h4 className="font-semibold mb-2">
+          AI Tool Use
+        </h4>
+
+        <p>
+          ChatGPT was used for brainstorming ideas, organizing the
+          outline, and reviewing grammar, punctuation, clarity, and
+          conciseness. Final revisions and wording were adjusted by me.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
