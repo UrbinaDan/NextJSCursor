@@ -286,11 +286,10 @@ export default function GraphicDesign() {
     </p>
 
     <p className="mb-4 leading-relaxed">
-      To imitate the original, I used a subject making a similar tongue-out
-      facial expression. I cropped the image closer to the face, removed visual
+      To imitate the original, I cropped the image closer to the face, removed visual
       distractions, and improved the image quality so it looked cleaner and more
       intentional. I also focused on making the portrait feel simple and fun,
-      similar to the original photograph.
+      similar to the original photograph. I wanted to capture the same sense of spontaneity and personality while
     </p>
 
     <p className="leading-relaxed">
@@ -300,10 +299,96 @@ export default function GraphicDesign() {
       I can use this lesson in my future photography by paying more attention to
       facial expressions, emotion, and the exact moment when I take the picture.
     </p>
+    <p></p>
+
   </div>
 </section>
 
+<section className="bg-white/70 rounded-2xl shadow-lg p-6 md:p-10 mb-10">
+  <h2 className="text-2xl font-bold mb-4">
+    Photography – Overlay Text Poster
+  </h2>
 
+  <div className="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <img
+        src="/NextJSCursor/graphic-design/Rooted in Colombia.png"
+        alt="Rooted in Colombia overlay text poster using an original family photograph"
+        className="rounded-xl shadow-md w-full"
+      />
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold mb-3">
+        Rooted in Colombia
+      </h3>
+
+      <p className="mb-4 leading-relaxed">
+        For this photography assignment, I created an overlay text poster using
+        an original photograph I took in Colombia. I chose this image because it
+        feels personal and nostalgic. It shows my parents standing together with
+        the mountains and neighborhood in the background, which connects the
+        image to family, memory, and my roots.
+      </p>
+
+      <p className="mb-4 leading-relaxed">
+        The main message of the poster is “Rooted in Colombia.” I wanted the
+        words to express how Colombia is connected to my identity and the place
+        that shaped my family story. The subtitle, “Family, memory, and the
+        place that shaped me,” supports the emotional meaning of the image.
+      </p>
+
+      <p className="mb-4 leading-relaxed">
+        I focused on making the text easy to read by using strong contrast,
+        clear spacing, and visual hierarchy. The title is the largest text
+        because it is the main message, while the subtitle and call to action
+        are smaller. I also used warm colors and a nostalgic style to match the
+        feeling of the photograph.
+      </p>
+
+      <p className="leading-relaxed">
+        This project helped me understand how photography and typography can
+        work together. A photo can communicate emotion by itself, but adding
+        carefully designed text can make the message even clearer and more
+        powerful.
+      </p>
+
+      <div className="mt-6">
+        <h4 className="font-semibold mb-2">
+          Message
+        </h4>
+
+        <p>
+          Family, memory, and the place that shaped me.
+        </p>
+      </div>
+
+      <div className="mt-6">
+        <h4 className="font-semibold mb-2">
+          Call to Action
+        </h4>
+
+        <p>
+          Explore my photography portfolio.
+        </p>
+      </div>
+
+      <div className="mt-6">
+        <h4 className="font-semibold mb-2">
+          Design Principles Used
+        </h4>
+
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Contrast</li>
+          <li>Spacing</li>
+          <li>Visual hierarchy</li>
+          <li>Balance</li>
+          <li>Legibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
         </div>
       </main>
