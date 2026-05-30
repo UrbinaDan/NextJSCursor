@@ -224,6 +224,85 @@ export default function GraphicDesign() {
 </section>
 
 
+<section className="bg-white/70 rounded-2xl shadow-lg p-6 md:p-10 mb-10">
+  <h2 className="text-2xl font-bold mb-4">
+    Photography – Famous Photo Recreation
+  </h2>
+
+  <div className="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <h3 className="text-xl font-semibold mb-3">
+        Original Famous Photo
+      </h3>
+
+      <img
+        src="/NextJSCursor/graphic-design/TonguAlberfamous.png"
+        alt="Original famous black and white tongue-out portrait"
+        className="rounded-xl shadow-md w-full mb-3"
+      />
+
+      <p className="text-sm text-[#4b4b3f] leading-relaxed">
+        Original photo by Arthur Sasse, 1951, via Wikimedia Commons / UPI.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold mb-3">
+        My Recreated Photo
+      </h3>
+
+      <img
+        src="/NextJSCursor/graphic-design/SofiSacandoola lengua.png"
+        alt="Recreated tongue-out portrait inspired by a famous photograph"
+        className="rounded-xl shadow-md w-full mb-3"
+      />
+
+      <p className="text-sm text-[#4b4b3f] leading-relaxed">
+        Recreated photo taken and edited for my DCC photography portfolio.
+      </p>
+    </div>
+  </div>
+
+  <div className="mt-8">
+    <h3 className="text-xl font-semibold mb-3">
+      Project Reflection
+    </h3>
+
+    <p className="mb-4 leading-relaxed">
+      For this photography assignment, I recreated a famous black-and-white
+      tongue-out portrait. I chose this image because it is memorable, playful,
+      and very recognizable. The original picture is famous because it shows a
+      spontaneous facial expression instead of a formal portrait. That contrast
+      makes the photo feel funny, human, and full of personality.
+    </p>
+
+    <p className="mb-4 leading-relaxed">
+      While preparing my recreated photograph, I considered composition,
+      cropping, contrast, focus, and facial expression. The original image is a
+      close-up portrait, so I wanted the face to be the main focus. I also used
+      a tighter crop so the viewer would pay attention to the playful expression
+      instead of the background. The expression was the most important part
+      because it is what makes the original photo so recognizable.
+    </p>
+
+    <p className="mb-4 leading-relaxed">
+      To imitate the original, I used a subject making a similar tongue-out
+      facial expression. I cropped the image closer to the face, removed visual
+      distractions, and improved the image quality so it looked cleaner and more
+      intentional. I also focused on making the portrait feel simple and fun,
+      similar to the original photograph.
+    </p>
+
+    <p className="leading-relaxed">
+      One key thing I learned from this project is that a strong photograph does
+      not always need a complicated background or setup. A simple close-up photo
+      can become powerful if the timing, expression, and composition are strong.
+      I can use this lesson in my future photography by paying more attention to
+      facial expressions, emotion, and the exact moment when I take the picture.
+    </p>
+  </div>
+</section>
+
 
 
         </div>
