@@ -519,6 +519,79 @@ export default function GraphicDesign() {
   </div>
 </section>
 
+<section className="bg-white/70 rounded-2xl shadow-lg p-6 md:p-10 mb-10">
+  <h2 className="text-2xl font-bold mb-4">
+    Audiobook Recording – World War II History
+  </h2>
+
+  <div className="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <h3 className="text-xl font-semibold mb-3">
+        Across the Reef: The Marine Assault of Tarawa
+      </h3>
+
+      <p className="mb-4 leading-relaxed">
+        For this audiobook project, I recorded a historical selection from
+        Across the Reef: The Marine Assault of Tarawa by Colonel Joseph H.
+        Alexander. I chose this World War II text because it allowed me to
+        practice a serious and respectful documentary-style narration. The
+        passage introduces the background and planning of the Marine assault on
+        Tarawa, so I focused on reading clearly and using a calm tone.
+      </p>
+
+      <p className="mb-4 leading-relaxed">
+        I added introductory and concluding music to create a reflective
+        historical atmosphere. During the main narration, I kept the audio free
+        of background music so the words could stay clear and easy to
+        understand.
+      </p>
+
+      <audio controls className="w-full">
+        <source
+          src="/NextJSCursor/audio-production/Daniel_Audiobook_Recording.mp3"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold mb-3">
+        Production Reflection
+      </h3>
+
+      <p className="mb-4 leading-relaxed">
+        In this recording, I practiced matching my voice to the genre of the
+        text. Since this was a historical World War II reading, I wanted the
+        narration to sound calm, serious, and respectful instead of overly
+        dramatic. I also tried to use natural pauses after important details so
+        the listener could better understand the story.
+      </p>
+
+      <p className="leading-relaxed">
+        This project helped me understand how pacing, tone, music, and editing
+        can change the feeling of an audiobook. I edited the recording to remove
+        long pauses, background noise, and strong plosives so the final audio
+        would sound cleaner and more professional.
+      </p>
+
+      <div className="mt-6">
+        <h4 className="font-semibold mb-2">
+          Skills Demonstrated
+        </h4>
+
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Audiobook narration</li>
+          <li>Documentary-style voice tone</li>
+          <li>Voice pacing and natural pauses</li>
+          <li>Intro and conclusion music</li>
+          <li>Audio cleanup and editing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
         </div>
       </main>
     </>
