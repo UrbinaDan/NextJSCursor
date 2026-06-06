@@ -390,6 +390,135 @@ export default function GraphicDesign() {
   </div>
 </section>
 
+
+<section className="bg-white/70 rounded-2xl shadow-lg p-6 md:p-10 mb-10">
+  <h2 className="text-2xl font-bold mb-4">
+    Audio Production – AI in Audio Production
+  </h2>
+
+  <div className="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <h3 className="text-xl font-semibold mb-3">
+        Self-Produced Sound Effects
+      </h3>
+
+      <p className="mb-4 leading-relaxed">
+        For this audio production assignment, I created sound effects using
+        everyday objects around me. I recorded the sound of a fork mixing egg
+        in a bowl before frying it, a plastic bottle being squeezed, and keys
+        shaking in my hand. These sounds helped me understand how simple objects
+        can be used creatively to build realistic sound effects.
+      </p>
+
+      <div className="space-y-6">
+        <div>
+          <h4 className="font-semibold mb-2">
+            Egg Mixing in a Bowl
+          </h4>
+          <p className="mb-2 text-sm text-[#4b4b3f]">
+            A self-produced sound effect of a fork mixing egg in a bowl before frying.
+          </p>
+          <audio controls className="w-full">
+            <source
+              src="/NextJSCursor/audio-production/Daniel_EggMixing.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <div>
+          <h4 className="font-semibold mb-2">
+            Plastic Bottle Crunch
+          </h4>
+          <p className="mb-2 text-sm text-[#4b4b3f]">
+            A self-produced sound effect of a plastic bottle being squeezed and crushed.
+          </p>
+          <audio controls className="w-full">
+            <source
+              src="/NextJSCursor/audio-production/Daniel_PlasticBottle.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <div>
+          <h4 className="font-semibold mb-2">
+            Shaking Keys
+          </h4>
+          <p className="mb-2 text-sm text-[#4b4b3f]">
+            A self-produced sound effect of metal keys shaking by hand.
+          </p>
+          <audio controls className="w-full">
+            <source
+              src="/NextJSCursor/audio-production/Daniel_Keys.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold mb-3">
+        Reflection
+      </h3>
+
+      <p className="mb-4 leading-relaxed">
+        For this assignment, I created three self-produced sound effects using
+        everyday objects. I recorded the sound of a fork mixing egg in a bowl
+        before frying it, a plastic bottle being squeezed, and keys shaking in
+        my hand. Then, I used an AI sound generator to create a similar sound
+        to the egg mixing recording. The AI-generated sound was clean and easy
+        to understand, but my real recording sounded more natural because it
+        had small details like the fork hitting the bowl and the movement of the
+        egg. To me, the self-produced sound was more realistic and satisfying
+        because it felt connected to a real moment in the kitchen. This
+        experience helped me learn that sound effects can be created from simple
+        objects, and that small imperfections can make audio feel more
+        authentic.
+      </p>
+
+      <div className="mt-6">
+        <h4 className="font-semibold mb-2">
+          AI-Generated Sound Prompt
+        </h4>
+
+        <p className="mb-4 leading-relaxed text-sm text-[#4b4b3f]">
+          A realistic kitchen sound effect of a fork rapidly mixing raw eggs
+          inside a ceramic bowl before frying. The sound should include light
+          scraping, liquid movement, and small tapping sounds from the fork
+          against the bowl. Recorded indoors in a quiet kitchen with natural
+          room sound.
+        </p>
+
+        <audio controls className="w-full">
+          <source
+            src="/NextJSCursor/audio-production/Daniel_AI_EggMixing.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div className="mt-6">
+        <h4 className="font-semibold mb-2">
+          Skills Demonstrated
+        </h4>
+
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Recording self-produced sound effects</li>
+          <li>Comparing real and AI-generated audio</li>
+          <li>Using everyday objects for sound design</li>
+          <li>Labeling and organizing audio files for a portfolio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
         </div>
       </main>
     </>
