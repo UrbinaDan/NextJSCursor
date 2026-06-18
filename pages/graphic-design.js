@@ -603,13 +603,6 @@ export default function GraphicDesign() {
       <h3 className="text-xl font-semibold mb-3">
         Paper Theater Kit Review
       </h3>
-
-      <img
-        src="/NextJSCursor/video-production/paper-theater-thumbnail.png"
-        alt="YouTube thumbnail for Paper Theater Kit UGC product video"
-        className="rounded-xl shadow-md w-full mb-6"
-      />
-
       <div className="aspect-video w-full rounded-xl overflow-hidden shadow-md">
         <iframe
           className="w-full h-full"
