@@ -592,6 +592,108 @@ export default function GraphicDesign() {
   </div>
 </section>
 
+
+<section className="bg-white/70 rounded-2xl shadow-lg p-6 md:p-10 mb-10">
+  <h2 className="text-2xl font-bold mb-4">
+    Video Production – UGC Product Video
+  </h2>
+
+  <div className="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <h3 className="text-xl font-semibold mb-3">
+        Paper Theater Kit Review
+      </h3>
+
+      <img
+        src="/NextJSCursor/video-production/paper-theater-thumbnail.png"
+        alt="YouTube thumbnail for Paper Theater Kit UGC product video"
+        className="rounded-xl shadow-md w-full mb-6"
+      />
+
+      <div className="aspect-video w-full rounded-xl overflow-hidden shadow-md">
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/rYwLun5dbUM"
+          title="Paper Theater Kit UGC Product Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      <p className="mt-3 text-sm text-[#4b4b3f] leading-relaxed">
+        Watch on YouTube:{" "}
+        <a
+          href="https://youtu.be/rYwLun5dbUM"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#146341] font-semibold underline"
+        >
+          Paper Theater Kit UGC Product Video
+        </a>
+      </p>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold mb-3">
+        Project Reflection
+      </h3>
+
+      <p className="mb-4 leading-relaxed">
+        For this video production project, I created a UGC product video about
+        a Paper Theater Kit. My goal was to show how the product starts as
+        simple paper pieces and becomes a small 3D artwork. I wanted the video
+        to feel creative, relaxing, and clear for people who enjoy crafts,
+        desk decorations, or Japanese-inspired designs.
+      </p>
+
+      <p className="mb-4 leading-relaxed">
+        During production, I used different shots and angles to make the video
+        more interesting. I included close-up shots of the paper theater,
+        wider shots of the product in a room setting, and B-roll to show the
+        details and depth of the layers. I also used narration, background
+        music, and text graphics to guide the viewer through the video.
+      </p>
+
+      <p className="leading-relaxed">
+        This project helped me understand how pre-production, lighting,
+        storyboarding, audio, and editing all work together. I learned that a
+        short video still needs planning so the message is easy to understand.
+        I also saw how lighting and camera angles can make a product look more
+        professional and visually appealing.
+      </p>
+
+      <div className="mt-6">
+        <h4 className="font-semibold mb-2">
+          Skills Demonstrated
+        </h4>
+
+        <ul className="list-disc pl-5 space-y-1">
+          <li>UGC product video production</li>
+          <li>Video planning and storyboarding</li>
+          <li>Lighting and camera angle selection</li>
+          <li>B-roll and multiple shot types</li>
+          <li>Narration and background music</li>
+          <li>Text graphics and YouTube thumbnail design</li>
+          <li>Video editing and post-production</li>
+        </ul>
+      </div>
+
+      <div className="mt-6">
+        <h4 className="font-semibold mb-2">
+          Design and Editing Choices
+        </h4>
+
+        <p className="leading-relaxed">
+          I used a warm and clean visual style to match the handmade feeling of
+          the paper theater. The thumbnail and video graphics use strong
+          contrast, clear typography, and a simple layout so the product is easy
+          to understand quickly.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
         </div>
       </main>
     </>
